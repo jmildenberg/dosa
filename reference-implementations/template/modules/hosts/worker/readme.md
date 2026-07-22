@@ -10,3 +10,7 @@ directly, and consumes/produces events described in
 Holds queue/broker consumer wiring and scheduled jobs — anything that runs without a direct inbound
 request. Business logic still lives in Application; this host only triggers it on a message or a
 schedule.
+
+---
+
+References: [docs/adrs/0005-standard-domain-module-layout.md](../../../../../docs/adrs/0005-standard-domain-module-layout.md)

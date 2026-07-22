@@ -11,7 +11,12 @@ directly.
 external-consumer hosts, which reach this domain only through Contracts and Clients), and by any other
 domain that calls this one.
 
-This domain is always API-shaped, so there is no per-protocol split like
-[Contracts](../contracts/readme.md) has. The split that matters here is by target language — a real
-domain adds one subfolder per language it publishes an SDK for, e.g. `java/`, `csharp/`, `go/` — since a
-consumer in another domain's stack needs a client in its own language, not this domain's.
+A consumer needs one client, regardless of whether the calls it wraps are synchronous or messaging —
+so unlike [Contracts](../contracts/readme.md), there is no per-protocol split here. The split that
+matters is by target language — a real domain adds one subfolder per language it publishes an SDK for,
+e.g. `java/`, `csharp/`, `go/` — since a consumer in another domain's stack needs a client in its own
+language, not this domain's.
+
+---
+
+References: [docs/adrs/0005-standard-domain-module-layout.md](../../../../docs/adrs/0005-standard-domain-module-layout.md)

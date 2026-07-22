@@ -8,3 +8,7 @@ directly, and serves the [Contracts/api](../../contracts/api/readme.md) surface 
 
 Framework and transport wiring (routing, DI container, middleware) lives here — the outermost ring,
 allowed to know about everything inward but exposing only what Contracts/api declares.
+
+---
+
+References: [docs/adrs/0005-standard-domain-module-layout.md](../../../../../docs/adrs/0005-standard-domain-module-layout.md)

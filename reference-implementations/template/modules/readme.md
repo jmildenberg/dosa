@@ -14,6 +14,7 @@ on something built on top of it, only on what it's built on.
 | [Clients](clients/readme.md) | Consumer-facing SDKs for calling this domain | Contracts |
 | [Infrastructure](infrastructure/readme.md) | Adapters for persistence, messaging, and external services | Application, Domain |
 | [Hosts](hosts/readme.md) | Deployable entry points | Varies by host role — see [Hosts](hosts/readme.md) |
+| Frontend *(optional, not scaffolded here)* | Presentation role, reaches the domain only through `hosts/web` | Nothing in this domain directly |
 
 A consuming domain never reaches into another domain's `modules/`. It depends only on that domain's
 published Contracts, typically through its Clients SDK.
