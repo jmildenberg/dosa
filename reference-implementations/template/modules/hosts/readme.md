@@ -3,8 +3,7 @@
 > [Template](../../readme.md) :: [Modules](../readme.md) :: Hosts
 
 Deployable entry points for this domain. A domain contains only the hosts it needs — not all five are
-mandatory — divided by whether the role operates on domain state
-(see [ADR-0005](../../../../docs/adrs/0005-standard-domain-module-layout.md)):
+mandatory — divided by whether the role operates on domain state:
 
 | Host | Role | References |
 |---|---|---|
@@ -14,6 +13,10 @@ mandatory — divided by whether the role operates on domain state
 | [mcp](mcp/readme.md) | External consumer — Model Context Protocol server | Contracts, Clients |
 | [shared](shared/readme.md) | Cross-host wiring shared by two or more hosts above | Varies |
 
-The operator/consumer split is the point: `web` and `mcp` reach this domain only through
-[Contracts](../contracts/readme.md) and [Clients](../clients/readme.md) — the same published-interface
-access any other domain has — so they cannot reach domain state even in principle.
+The operator/consumer split is the point: `web` and `mcp` reach this domain only through Contracts and
+Clients — the same published-interface access any other domain has — so they cannot reach domain state
+even in principle.
+
+---
+
+References: [docs/adrs/0005-standard-domain-module-layout.md](../../../../docs/adrs/0005-standard-domain-module-layout.md)

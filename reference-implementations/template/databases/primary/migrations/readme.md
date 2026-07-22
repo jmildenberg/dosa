@@ -3,8 +3,7 @@
 > [Template](../../../readme.md) :: [Databases](../../readme.md) :: [Primary](../readme.md) :: Migrations
 
 Version-controlled schema migration scripts, applied by the tool configured in
-[tooling/](../tooling/readme.md). Schema is authored here first; application code conforms to it
-(see [ADR-0014, Schema-First Persistence](../../../../../docs/adrs/0014-schema-first-persistence.md)).
+[tooling/](../tooling/readme.md). Schema is authored here first; application code conforms to it.
 
 Every migration follows **expand-contract** and deploys **ahead of** the code that needs it:
 
@@ -18,3 +17,7 @@ A destructive change in one step — a dropped column, a narrowed type, a non-nu
 default — is blocked by the breaking-change gate unless it is a deliberate, approved contract step.
 Because every migration is additive, rollback is always a code-artifact rollback, never a schema
 rollback.
+
+---
+
+References: [docs/adrs/0014-schema-first-persistence.md](../../../../../docs/adrs/0014-schema-first-persistence.md)

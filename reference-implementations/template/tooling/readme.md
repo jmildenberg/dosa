@@ -11,4 +11,8 @@ under [deploy/](../deploy/readme.md).
 | [githooks/](githooks/readme.md) | Git hook scripts (e.g. pre-commit checks) and their installer |
 | [installers/](installers/readme.md) | Scripts that set up a local dev environment |
 | [scripts/](scripts/readme.md) | One-off or repeatable local-dev utility scripts |
-| [security/](security/readme.md) | Local configuration for the security gates described in [Security](../../../docs/security.md) |
+| [security/](security/readme.md) | Local configuration for the org's security gates |
+
+---
+
+References: [docs/security.md](../../../docs/security.md)
