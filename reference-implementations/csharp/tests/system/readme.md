@@ -1,6 +1,6 @@
-# Template :: Tests :: System
+# C# :: Tests :: System
 
-> [Template](../../readme.md) :: [Tests](../readme.md) :: System
+> [C#](../../readme.md) :: [Tests](../readme.md) :: System
 
 Tests that exercise this domain end-to-end through its published surface — a running
 [hosts/api](../../modules/hosts/api/readme.md) or [hosts/worker](../../modules/hosts/worker/readme.md)

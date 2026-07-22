@@ -1,6 +1,6 @@
-# Template :: Modules :: Contracts
+# C# :: Modules :: Contracts
 
-> [Template](../../readme.md) :: [Modules](../readme.md) :: Contracts
+> [C#](../../readme.md) :: [Modules](../readme.md) :: Contracts
 
 Published request, response, and event schema types this domain exposes to the outside world, kept in
 lockstep with the interface specs authored in `docs/contracts/`. Split by protocol:

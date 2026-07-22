@@ -1,6 +1,6 @@
-# Template :: Databases :: Primary :: Migrations
+# C# :: Databases :: Primary :: Migrations
 
-> [Template](../../../readme.md) :: [Databases](../../readme.md) :: [Primary](../readme.md) :: Migrations
+> [C#](../../../readme.md) :: [Databases](../../readme.md) :: [Primary](../readme.md) :: Migrations
 
 Version-controlled schema migration scripts, applied by the tool configured in
 [tooling/](../tooling/readme.md). Schema is authored here first; application code conforms to it.

@@ -1,6 +1,6 @@
-# Template :: Modules :: Contracts :: Messaging
+# C# :: Modules :: Contracts :: Messaging
 
-> [Template](../../../readme.md) :: [Modules](../../readme.md) :: [Contracts](../readme.md) :: Messaging
+> [C#](../../../readme.md) :: [Modules](../../readme.md) :: [Contracts](../readme.md) :: Messaging
 
 Event types this domain publishes and consumes, generated from or kept in lockstep with the AsyncAPI
 spec in [docs/contracts/messaging/](../../../docs/contracts/messaging/readme.md). Consumed by

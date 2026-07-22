@@ -1,6 +1,6 @@
-# Template :: Modules :: Hosts :: MCP
+# C# :: Modules :: Hosts :: MCP
 
-> [Template](../../../readme.md) :: [Modules](../../readme.md) :: [Hosts](../readme.md) :: MCP
+> [C#](../../../readme.md) :: [Modules](../../readme.md) :: [Hosts](../readme.md) :: MCP
 
 External-consumer host — a Model Context Protocol server. Like [web](../web/readme.md), it's bound to
 [Contracts](../../contracts/readme.md) and [Clients](../../clients/readme.md) only (see [Hosts](../readme.md)

@@ -1,6 +1,6 @@
-# Template :: Modules :: Clients
+# C# :: Modules :: Clients
 
-> [Template](../../readme.md) :: [Modules](../readme.md) :: Clients
+> [C#](../../readme.md) :: [Modules](../readme.md) :: Clients
 
 Consumer-facing SDK for calling this domain — the concrete implementation other domains and external
 callers use instead of hand-rolling HTTP or messaging calls against [Contracts](../contracts/readme.md)

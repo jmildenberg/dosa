@@ -1,6 +1,6 @@
-# Template :: Tooling
+# C# :: Tooling
 
-> [Template](../readme.md) :: Tooling
+> [C#](../readme.md) :: Tooling
 
 Local-dev and CI-adjacent helpers — not the domain's runtime, and not shipped in any of the images built
 under [deploy/](../deploy/readme.md).

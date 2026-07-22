@@ -1,6 +1,6 @@
-# Template :: Modules :: Contracts :: API
+# C# :: Modules :: Contracts :: API
 
-> [Template](../../../readme.md) :: [Modules](../../readme.md) :: [Contracts](../readme.md) :: API
+> [C#](../../../readme.md) :: [Modules](../../readme.md) :: [Contracts](../readme.md) :: API
 
 Request/response types for this domain's synchronous, spec-defined interface — generated from or kept
 in lockstep with the OpenAPI spec in [docs/contracts/api/](../../../docs/contracts/api/readme.md).

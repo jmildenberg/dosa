@@ -1,6 +1,6 @@
-# Template :: Documentation :: Contracts
+# C# :: Documentation :: Contracts
 
-> [Template](../../readme.md) :: [Documentation](../readme.md) :: Contracts
+> [C#](../../readme.md) :: [Documentation](../readme.md) :: Contracts
 
 The authoritative OpenAPI and AsyncAPI specifications for what this domain publishes. These specs are
 authored *first* — code in [modules/contracts/](../../modules/contracts/readme.md) is generated from or

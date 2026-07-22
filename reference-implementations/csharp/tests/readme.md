@@ -1,6 +1,6 @@
-# Template :: Tests
+# C# :: Tests
 
-> [Template](../readme.md) :: Tests
+> [C#](../readme.md) :: Tests
 
 Repo-wide tests: per-module unit tests live inside their own module, following whatever placement the
 build tooling dictates (`src/test` for JVM, a separate test project for .NET). What lives here is what

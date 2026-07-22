@@ -1,6 +1,6 @@
-# Template :: Modules :: Hosts
+# C# :: Modules :: Hosts
 
-> [Template](../../readme.md) :: [Modules](../readme.md) :: Hosts
+> [C#](../../readme.md) :: [Modules](../readme.md) :: Hosts
 
 Deployable entry points for this domain. A domain contains only the hosts it needs — not all five are
 mandatory — divided by whether the role operates on domain state:

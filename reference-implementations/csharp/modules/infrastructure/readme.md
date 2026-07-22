@@ -1,6 +1,6 @@
-# Template :: Modules :: Infrastructure
+# C# :: Modules :: Infrastructure
 
-> [Template](../../readme.md) :: [Modules](../readme.md) :: Infrastructure
+> [C#](../../readme.md) :: [Modules](../readme.md) :: Infrastructure
 
 Persistence, messaging, and external-service adapters that implement the ports Application defines —
 the layer that translates between the domain's language and the outside world.

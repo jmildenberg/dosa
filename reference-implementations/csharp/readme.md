@@ -1,9 +1,9 @@
-# Template
+# C#
 
-> Template
+> C#
 
-Language-agnostic scaffold for a single domain repository. Folder names and locations are the standard;
-build-artifact and package names inside them stay idiomatic to whatever stack a real domain uses.
+C# reference implementation of the DOSA standard directory structure, following the layout defined by
+the [template](../template/readme.md).
 
 | Area | What it holds |
 |---|---|

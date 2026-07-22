@@ -1,6 +1,6 @@
-# Template :: Deploy :: Docker
+# C# :: Deploy :: Docker
 
-> [Template](../../readme.md) :: [Deploy](../readme.md) :: Docker
+> [C#](../../readme.md) :: [Deploy](../readme.md) :: Docker
 
 One Dockerfile per [Host](../../modules/hosts/readme.md), each a multi-stage build: a build stage with
 the full toolchain, and a minimal runtime stage that ships only what the host needs to run, as a

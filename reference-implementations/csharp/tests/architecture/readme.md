@@ -1,6 +1,6 @@
-# Template :: Tests :: Architecture
+# C# :: Tests :: Architecture
 
-> [Template](../../readme.md) :: [Tests](../readme.md) :: Architecture
+> [C#](../../readme.md) :: [Tests](../readme.md) :: Architecture
 
 Fitness functions that make the dependency rule enforceable rather than conventional:
 [Domain](../../modules/domain/readme.md) must not reference [Infrastructure](../../modules/infrastructure/readme.md),

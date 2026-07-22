@@ -1,6 +1,6 @@
-# Template :: Deploy :: Helm
+# C# :: Deploy :: Helm
 
-> [Template](../../readme.md) :: [Deploy](../readme.md) :: Helm
+> [C#](../../readme.md) :: [Deploy](../readme.md) :: Helm
 
 Kubernetes deployment chart(s) for this domain's [Hosts](../../modules/hosts/readme.md) — one release per
 host, health-checked rolling deployments, environment-specific values layered on top of a shared base

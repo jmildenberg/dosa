@@ -1,6 +1,6 @@
-# Template :: Documentation :: Architecture
+# C# :: Documentation :: Architecture
 
-> [Template](../../readme.md) :: [Documentation](../readme.md) :: Architecture
+> [C#](../../readme.md) :: [Documentation](../readme.md) :: Architecture
 
 This domain's structure, applying the org-wide architecture principles to this domain's specific
 bounded context: what the domain owns, its dependencies on other domains (always through their

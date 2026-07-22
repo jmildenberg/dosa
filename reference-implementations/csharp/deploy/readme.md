@@ -1,6 +1,6 @@
-# Template :: Deploy
+# C# :: Deploy
 
-> [Template](../readme.md) :: Deploy
+> [C#](../readme.md) :: Deploy
 
 Packaging and deployment assets for this domain's [Hosts](../modules/hosts/readme.md) — one deployable
 image per host, never bundled together, so each is deployable and scalable on its own lifecycle.

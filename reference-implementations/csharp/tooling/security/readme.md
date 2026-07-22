@@ -1,6 +1,6 @@
-# Template :: Tooling :: Security
+# C# :: Tooling :: Security
 
-> [Template](../../readme.md) :: [Tooling](../readme.md) :: Security
+> [C#](../../readme.md) :: [Tooling](../readme.md) :: Security
 
 Local configuration for the pipeline security gates this domain runs in [CI](../ci/readme.md): SAST, SCA
 (dependency scanning), container image scanning, and DAST configuration/suppression files, plus any

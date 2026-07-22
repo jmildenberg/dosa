@@ -1,6 +1,6 @@
-# Template :: Modules :: Domain
+# C# :: Modules :: Domain
 
-> [Template](../../readme.md) :: [Modules](../readme.md) :: Domain
+> [C#](../../readme.md) :: [Modules](../readme.md) :: Domain
 
 The innermost layer — entities and domain rules that would still be true if every framework, database,
 and transport in this repository were swapped out.

@@ -1,6 +1,6 @@
-# Template :: Modules :: Hosts :: API
+# C# :: Modules :: Hosts :: API
 
-> [Template](../../../readme.md) :: [Modules](../../readme.md) :: [Hosts](../readme.md) :: API
+> [C#](../../../readme.md) :: [Modules](../../readme.md) :: [Hosts](../readme.md) :: API
 
 In-process operator host — the domain-logic API. References [Domain](../../domain/readme.md),
 [Application](../../application/readme.md), and [Infrastructure](../../infrastructure/readme.md)

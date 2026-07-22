@@ -1,6 +1,6 @@
-# Template :: Modules :: Hosts :: Web
+# C# :: Modules :: Hosts :: Web
 
-> [Template](../../../readme.md) :: [Modules](../../readme.md) :: [Hosts](../readme.md) :: Web
+> [C#](../../../readme.md) :: [Modules](../../readme.md) :: [Hosts](../readme.md) :: Web
 
 External-consumer host — request-shaping / backend-for-frontend. References only
 [Contracts](../../contracts/readme.md) and [Clients](../../clients/readme.md), the same

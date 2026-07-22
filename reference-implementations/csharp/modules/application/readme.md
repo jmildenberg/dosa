@@ -1,6 +1,6 @@
-# Template :: Modules :: Application
+# C# :: Modules :: Application
 
-> [Template](../../readme.md) :: [Modules](../readme.md) :: Application
+> [C#](../../readme.md) :: [Modules](../readme.md) :: Application
 
 Use cases and orchestration. Coordinates Domain entities to satisfy a specific request, but contains no
 business rule of its own and no infrastructure detail.

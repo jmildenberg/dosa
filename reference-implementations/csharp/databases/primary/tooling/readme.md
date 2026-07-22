@@ -1,6 +1,6 @@
-# Template :: Databases :: Primary :: Tooling
+# C# :: Databases :: Primary :: Tooling
 
-> [Template](../../../readme.md) :: [Databases](../../readme.md) :: [Primary](../readme.md) :: Tooling
+> [C#](../../../readme.md) :: [Databases](../../readme.md) :: [Primary](../readme.md) :: Tooling
 
 Configuration for the schema-migration tool that applies [migrations/](../migrations/readme.md) and
 loads [seeds/](../seeds/readme.md) — e.g. Flyway or Liquibase config, connection profiles per environment.

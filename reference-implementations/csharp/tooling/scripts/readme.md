@@ -1,6 +1,6 @@
-# Template :: Tooling :: Scripts
+# C# :: Tooling :: Scripts
 
-> [Template](../../readme.md) :: [Tooling](../readme.md) :: Scripts
+> [C#](../../readme.md) :: [Tooling](../readme.md) :: Scripts
 
 One-off or repeatable local-dev utility scripts that don't belong under
 [installers/](../installers/readme.md) or [ci/](../ci/readme.md) — e.g. regenerating types from the

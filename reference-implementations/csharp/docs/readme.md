@@ -1,6 +1,6 @@
-# Template :: Documentation
+# C# :: Documentation
 
-> [Template](../readme.md) :: Documentation
+> [C#](../readme.md) :: Documentation
 
 This domain's own documentation — repo-local, distinct from the org-wide guidance in the root docs.
 Where the org standard defines *what every domain must satisfy*, this folder records *how this specific

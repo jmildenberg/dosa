@@ -1,6 +1,6 @@
-# Template :: Tooling :: CI
+# C# :: Tooling :: CI
 
-> [Template](../../readme.md) :: [Tooling](../readme.md) :: CI
+> [C#](../../readme.md) :: [Tooling](../readme.md) :: CI
 
 Pipeline definitions that run on every push to main: the test suites, the org's security gates, the
 image build in [deploy/docker/](../../deploy/docker/readme.md), and the promotion into the first

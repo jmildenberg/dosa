@@ -1,6 +1,6 @@
-# Template :: Databases :: Primary
+# C# :: Databases :: Primary
 
-> [Template](../../readme.md) :: [Databases](../readme.md) :: Primary
+> [C#](../../readme.md) :: [Databases](../readme.md) :: Primary
 
 This domain's primary data source. Everything about its schema lives here, not scattered across
 [modules/infrastructure](../../modules/infrastructure/readme.md) — infrastructure code reads and writes

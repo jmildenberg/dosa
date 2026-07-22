@@ -1,6 +1,6 @@
-# Template :: Modules
+# C# :: Modules
 
-> [Template](../readme.md) :: Modules
+> [C#](../readme.md) :: Modules
 
 All code for the domain lives here, organized so dependencies only point inward: a module never depends
 on something built on top of it, only on what it's built on.

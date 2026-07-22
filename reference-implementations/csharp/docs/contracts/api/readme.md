@@ -1,6 +1,6 @@
-# Template :: Documentation :: Contracts :: API
+# C# :: Documentation :: Contracts :: API
 
-> [Template](../../../readme.md) :: [Documentation](../../readme.md) :: [Contracts](../readme.md) :: API
+> [C#](../../../readme.md) :: [Documentation](../../readme.md) :: [Contracts](../readme.md) :: API
 
 OpenAPI specification(s) for this domain's synchronous interface, including its standard error response
 shape. Source of truth for [modules/contracts/api/](../../../modules/contracts/api/readme.md) and what

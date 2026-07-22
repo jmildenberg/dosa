@@ -1,6 +1,6 @@
-# Template :: Documentation :: Decision Records
+# C# :: Documentation :: Decision Records
 
-> [Template](../../readme.md) :: [Documentation](../readme.md) :: Decision Records
+> [C#](../../readme.md) :: [Documentation](../readme.md) :: Decision Records
 
 Architecture Decision Records for choices specific to this domain — not the org-wide standard, which
 lives in the root docs. Follows the same format as an org ADR, scoped to a decision this domain alone

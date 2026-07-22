@@ -1,6 +1,6 @@
-# Template :: Databases
+# C# :: Databases
 
-> [Template](../readme.md) :: Databases
+> [C#](../readme.md) :: Databases
 
 Source of truth for persistence, one directory per data source. This domain has one:
 [primary/](primary/readme.md) — add another sibling directory only when the domain genuinely owns a

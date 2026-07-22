@@ -1,6 +1,6 @@
-# Template :: Modules :: Hosts :: Worker
+# C# :: Modules :: Hosts :: Worker
 
-> [Template](../../../readme.md) :: [Modules](../../readme.md) :: [Hosts](../readme.md) :: Worker
+> [C#](../../../readme.md) :: [Modules](../../readme.md) :: [Hosts](../readme.md) :: Worker
 
 In-process operator host — asynchronous processing. References [Domain](../../domain/readme.md),
 [Application](../../application/readme.md), and [Infrastructure](../../infrastructure/readme.md)

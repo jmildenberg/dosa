@@ -1,6 +1,6 @@
-# Template :: Modules :: Common
+# C# :: Modules :: Common
 
-> [Template](../../readme.md) :: [Modules](../readme.md) :: Common
+> [C#](../../readme.md) :: [Modules](../readme.md) :: Common
 
 Shared kernel — small, stable, cross-cutting types and utilities (e.g. a `Result` type, common value
 objects) with no business logic and no dependency on any other module here.
