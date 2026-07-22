@@ -1,3 +1,3 @@
 # Template :: Documentation
 
-[Template](../readme.md) :: Documentation
+> [Template](../readme.md) :: Documentation

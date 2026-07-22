@@ -1,3 +1,3 @@
 # Template :: Databases
 
-[Template](../readme.md) :: Databases
+> [Template](../readme.md) :: Databases

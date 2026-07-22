@@ -1,6 +1,6 @@
 # DOSA :: Reference Implementations
 
-[DOSA](../readme.md) :: Reference Implementations
+> [DOSA](../readme.md) :: Reference Implementations
 
 | Implementation | Description |
 | --- | --- |

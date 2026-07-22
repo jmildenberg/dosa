@@ -1,3 +1,3 @@
 # Template :: Tooling
 
-[Template](../readme.md) :: Tooling
+> [Template](../readme.md) :: Tooling

@@ -1,3 +1,3 @@
 # Template :: Deploy
 
-[Template](../readme.md) :: Deploy
+> [Template](../readme.md) :: Deploy

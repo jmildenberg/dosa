@@ -1,3 +1,3 @@
 # Template :: Modules
 
-[Template](../readme.md) :: Modules
+> [Template](../readme.md) :: Modules

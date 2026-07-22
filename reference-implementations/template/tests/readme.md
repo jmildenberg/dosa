@@ -1,3 +1,3 @@
 # Template :: Tests
 
-[Template](../readme.md) :: Tests
+> [Template](../readme.md) :: Tests
