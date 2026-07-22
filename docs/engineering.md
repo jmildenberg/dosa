@@ -387,7 +387,7 @@ All inbound requests and outbound calls should participate in a distributed trac
 
 ### 8. Security
 
-Security is a first-class concern with its own foundational document — see the [security document](security.md). It is the practice complement to the [Least-Privilege Boundaries](architecture.md#4-least-privilege-boundaries) architecture principle, defining how authentication and authorization, secure pipeline gates, encryption, input validation, threat modeling, and incident response are implemented and verified. Specific tooling choices are recorded separately by each business unit; the security standard itself is tool-agnostic.
+Security is a first-class concern with its own foundational document — see the [security document](security.md). It is the practice complement to the [Least-Privilege Boundaries](architecture.md#4-least-privilege-boundaries) architecture principle, defining how authentication and authorization, secure pipeline gates, encryption, input validation, threat modeling, and incident response are implemented and verified. Specific tooling choices are recorded separately by each adopter; the security standard itself is tool-agnostic.
 
 Several of those practices execute within the engineering lifecycle described in this document, and the security document is the authoritative source for each:
 

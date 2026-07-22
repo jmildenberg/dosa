@@ -120,7 +120,7 @@ expectation; recovery objectives (RTO/RPO) and backup mechanics are governed by 
 organizational policy rather than defined here.
 
 *Recovery objectives, backup standards, and failover expectations are for the SRE team and
-business unit to set.*
+adopting organization to set.*
 
 ## Operational Readiness
 

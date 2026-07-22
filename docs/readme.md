@@ -21,6 +21,6 @@ The guidance is versioned as a whole so adopters can state exactly what they con
 
 The version is semantic at the standard level: a **major** bump removes or reverses guidance (a
 superseding ADR that breaks existing conformance); a **minor** bump adds guidance (a new ADR or a
-material new section); a **patch** clarifies without changing obligations. Each business unit's
-[conformance ledger](../business-units/) records the standard version its assessment was made against,
-so a "Conformant" stance is anchored to a specific revision rather than a moving target.
+material new section); a **patch** clarifies without changing obligations. An adopter states which
+standard version its conformance was assessed against, so a "Conformant" stance is anchored to a
+specific revision rather than a moving target.

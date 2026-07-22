@@ -6,7 +6,7 @@ This document defines the security practices for systems built on this guidance 
 
 Security is treated as a first-class concern with its own foundational document rather than a subsection of engineering, because it is an accountable discipline in its own right: the practices here are owned, reviewed, and evolved as a distinct standard. The [engineering document](engineering.md) is where several of these practices *execute* — the CI pipeline runs the security gates, Interface Adapters implement input validation, externalized configuration injects secrets — but the security standard itself lives here and those documents reference it rather than restating it. The [operations document](operations.md) owns the general incident-response process that the security incident track below extends, and the [governance document](governance.md) owns the exception and compliance model these practices sit within.
 
-Specific tooling choices are recorded separately by each business unit; the practices defined here are tool-agnostic. Where a concrete product is named, it is an example of a conformant implementation, not a mandate.
+Specific tooling choices are recorded separately by each adopter; the practices defined here are tool-agnostic. Where a concrete product is named, it is an example of a conformant implementation, not a mandate.
 
 ## 1. Secure Pipeline Gates
 
@@ -98,11 +98,11 @@ Every inbound payload — a synchronous request or an asynchronous event — is 
 ## 8. Encryption in Transit and at Rest
 
 - **In transit**: TLS is required for every call — external traffic reaching the system and every internal, service-to-service call between domains — with no exemption for traffic that stays inside a cluster or network boundary. Network controls establish which paths are possible and authentication establishes who is on them; TLS ensures the traffic on those paths cannot be read or tampered with. The same expectation applies to messaging-broker connections: authenticated broker connections run over an encrypted transport, not a plaintext one with credentials layered on top.
-- **At rest**: Every data store and secrets-management capability a system uses encrypts data at rest. The specific mechanism — transparent storage encryption, a managed key service, or a data store's native encryption — is a business-unit and platform choice tied to the concrete infrastructure in use. The requirement is that encryption at rest exists; the product and key-management scheme that provide it are not defined here.
+- **At rest**: Every data store and secrets-management capability a system uses encrypts data at rest. The specific mechanism — transparent storage encryption, a managed key service, or a data store's native encryption — is an adopter and platform choice tied to the concrete infrastructure in use. The requirement is that encryption at rest exists; the product and key-management scheme that provide it are not defined here.
 
 ## 9. Threat Modeling
 
-Systems undergo threat modeling on a defined, recurring cadence, not only when a structural change happens to trigger one. Threats evolve independently of the codebase, so a one-time or change-triggered model goes stale. The interval, methodology (such as STRIDE or attack trees), and who performs it — the owning team, a central security function, or both — are a business-unit and organizational choice. What this guidance requires is that some recurring cadence is defined and actually followed, rather than left informal or skipped indefinitely.
+Systems undergo threat modeling on a defined, recurring cadence, not only when a structural change happens to trigger one. Threats evolve independently of the codebase, so a one-time or change-triggered model goes stale. The interval, methodology (such as STRIDE or attack trees), and who performs it — the owning team, a central security function, or both — are an adopter and organizational choice. What this guidance requires is that some recurring cadence is defined and actually followed, rather than left informal or skipped indefinitely.
 
 ## 10. Security Incident Response
 
@@ -113,4 +113,4 @@ A security incident — unauthorized access, credential compromise, or a suspect
 
 ## 11. Compliance Posture
 
-Compliance requirements vary by product. Security practices should be designed to support the compliance posture required by the product adopting this guidance. Where specific compliance frameworks apply, the controls defined here serve as a baseline and additional requirements are layered on top, recorded in the adopting business unit's own documentation rather than here.
+Compliance requirements vary by product. Security practices should be designed to support the compliance posture required by the product adopting this guidance. Where specific compliance frameworks apply, the controls defined here serve as a baseline and additional requirements are layered on top, recorded in the adopter's own documentation rather than here.

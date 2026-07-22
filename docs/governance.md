@@ -88,16 +88,6 @@ Exceptions to established principles or practices are occasionally warranted. Th
 - **Resolution**: If resolving the exception requires a code change, that change must be delivered by the next release
 - **Documentation**: Approved exceptions are recorded with their scope, rationale, duration, and resolution plan
 
-## Business-Unit Adoption
-
-This guidance is the organization's shared standard. Each business unit adopts it, at its own pace, rather than forking it. Business units are at different levels of readiness, which is expected; what is required is that each is explicit about where it does not yet conform and has a path back to conformance for every gap. Each unit's adoption is recorded under `business-units/<unit>/`.
-
-- **Conformance tracking**: Each unit maintains a `conformance.md` ledger with one row per org ADR, marked **Conformant** or **Non-conformant**. This ledger is the unit's readiness signal and the target for review and tooling, kept separate from the unit's narrative documentation.
-- **Conformance is versioned**: The org standard carries a version (see [Standard version](readme.md#standard-version)). Each ledger records the standard version its assessment was made against, so a stance is anchored to a specific revision rather than a moving target. When the standard version bumps, a unit re-assesses against the new version and updates the recorded version — the gap between an old assessment and the current standard is itself a visible readiness signal.
-- **Non-conformance is documented, not silent**: Every non-conformant row is backed by a business-unit ADR that gives interim guidance for operating in the gap and a path back to conformance with a target. This is the Exception Process above realized at unit scope — a deliberate, time-bounded, documented position — and it is approved the same way: a deviation from the shared standard is TAG-visible and, beyond a short local waiver, TAG-approved before its ADR is accepted.
-- **Business-unit ADRs**: These live in the unit's own `adrs/` directory, follow the same format as org ADRs, and run a unit-prefixed number sequence (for example `lnls-0001`). A business-unit ADR references the org ADR it addresses; **org ADRs never reference a business unit** — the shared standard stays clean and one-directional.
-- **Local specifics**: The concrete tooling and compliance choices this guidance defers to business units are recorded in each unit's own documentation, alongside its conformance ledger, not in the org standard.
-
 ## Document Governance
 
 The architecture and engineering documents are living standards. Changes to them follow the same ADR process as significant system decisions — a proposed change is documented, reviewed by the relevant team leads, and approved by a member of the TAG whose architectural remit covers the change before the document is updated. Where a change spans multiple areas, no single remit clearly applies, or approval is blocked or contested, it escalates to the TAG, which resolves it collectively. No single individual is the sole approver.

@@ -26,17 +26,18 @@ The canonical layout:
 ```text
 <domain>/
 ├── docs/            # adrs/, architecture/, contracts/ (OpenAPI + AsyncAPI specs — source of truth), operations/
-├── databases/       # one dir per data source: migrations/, seeds/ — source of truth for persistence
+├── databases/       # one dir per data source: migrations/, seeds/, tooling/ (schema-upgrade tool config) — source of truth for persistence
 ├── deploy/          # docker/ (image build assets), helm/ (deployment chart)
 ├── modules/         # all code areas
 │   ├── domain/          # entities + rules
 │   ├── application/     # use cases / orchestration
-│   ├── contracts/       # contracts-api/, contracts-messaging/ — published interface types
-│   ├── clients/         # clients-api/ — consumer SDK for calling this domain
+│   ├── common/          # shared kernel — cross-cutting types/utilities, no business logic
+│   ├── contracts/       # api/, messaging/ — published interface types
+│   ├── clients/         # language-targeted client SDKs (java/, csharp/, go/, etc.) for calling this domain
 │   ├── infrastructure/  # persistence, messaging, external adapters
 │   ├── frontend/        # presentation role (optional)
-│   └── hosts/           # host-api/, host-worker/, host-web/, host-agent/, host-shared/
-├── tests/           # architectural-tests/, system-tests/ (repo-wide)
+│   └── hosts/           # api/, worker/, web/, mcp/, shared/
+├── tests/           # architecture/, system/ (repo-wide)
 ├── tooling/         # local-dev helpers, git-hook installers
 └── README.md
 ```
@@ -47,17 +48,18 @@ The code modules preserve the Clean Architecture dependency rule (dependencies p
 |---|---|---|
 | **Domain** | Core business entities and domain rules | Nothing |
 | **Application** | Use cases and orchestration | Domain |
+| **Common** | Shared kernel — cross-cutting types and utilities with no business logic | Nothing |
 | **Contracts** | Published request, response, and event schema types the domain exposes; carries no Domain internals | Nothing |
 | **Clients** | Consumer-facing implementation for invoking this domain | Contracts |
 | **Infrastructure** | Adapters for external services, messaging, and persistence | Application, Domain |
 | **Database** | Schema definitions and migrations; source of truth for persistence | Nothing |
 
-Any module may be extended into multiple focused modules using its name as a prefix (Infrastructure into persistence and messaging; Contracts and Clients by protocol), and the dependency rules of the base module apply to all of its extensions.
+A module may be extended into multiple focused subfolders nested plainly under it, with no prefix repeating the module's own name — flat, GitHub-idiomatic nesting reads faster than a bespoke naming scheme (Infrastructure into persistence and messaging; Contracts by protocol: `contracts/api/`, `contracts/messaging/`; Clients by target language: `clients/java/`, `clients/csharp/`, `clients/go/`). The dependency rules of the base module apply to all of its subfolders.
 
 **Roles and hosts.** A domain contains only the hosts it needs — each a deployable entry point under `modules/hosts/` — divided by whether the role operates on domain state:
 
-- **In-process operators** — `host-api` (domain-logic) and `host-worker` (asynchronous processing) reference Domain, Application, and Infrastructure directly.
-- **External consumers** — `host-web` (request-shaping / backend-for-frontend) and `host-agent` (agent-driven) reference only Contracts and Clients — the same published-interface access any other domain has — so they cannot reach domain state even in principle. The presentation role (`frontend/`) reaches the domain only through the request-shaping host. The agent-driven host is not a special case: it is just another external-consumer host of the standard layout. Its name reflects the consumer it *serves*, not what it *is* — like `host-web` it holds no logic of its own (no model or agent runtime lives here); it exposes the published surface to agent clients, and the agent itself lives in whatever client connects.
+- **In-process operators** — `hosts/api` (domain-logic) and `hosts/worker` (asynchronous processing) reference Domain, Application, and Infrastructure directly.
+- **External consumers** — `hosts/web` (request-shaping / backend-for-frontend) and `hosts/mcp` (Model Context Protocol server) reference only Contracts and Clients — the same published-interface access any other domain has — so they cannot reach domain state even in principle. The presentation role (`frontend/`) reaches the domain only through the request-shaping host. The MCP host is not a special case: it is just another external-consumer host of the standard layout. It holds no logic of its own (no model or agent runtime lives here); it exposes the published surface to MCP clients, and the agent itself lives in whatever client connects.
 
 Inter-domain dependencies flow exclusively through the producing domain's **Clients** module, which depends only on **Contracts**. A consuming domain therefore references published contracts and never another domain's internals.
 
@@ -70,7 +72,7 @@ Inter-domain dependencies flow exclusively through the producing domain's **Clie
 - Inter-domain coupling is forced through the Clients/Contracts boundary, keeping cross-domain access deliberate and consistent with Domain-Oriented Service Architecture
 - Engineers moving between domains encounter a familiar structure, lowering the cost of ownership transfer
 - Standardizing the folder structure while leaving build-artifact names idiomatic gives one recognizable map across languages without forcing any stack away from its native conventions — an engineer recognizes the same shape in a C# and a Java domain
-- The role/host model gives the domain's runnable components a shared vocabulary, and the operator/consumer split makes the external-consumer boundary (BFF and agent-driven hosts have no domain-state access) structurally enforceable rather than conventional
+- The role/host model gives the domain's runnable components a shared vocabulary, and the operator/consumer split makes the external-consumer boundary (`hosts/web` and `hosts/mcp` have no domain-state access) structurally enforceable rather than conventional
 - Per-module unit-test placement is the one thing the layout cannot unify — it follows each build tool's convention — so the standard covers the repo-wide test areas and leaves that placement to the ecosystem
 - Domains must maintain the separation even when it feels heavier than a single combined module — the structure carries overhead that is only justified at domain scale
 - Module extensions introduce naming and organizational decisions that teams must make consistently for the dependency rules to remain legible
