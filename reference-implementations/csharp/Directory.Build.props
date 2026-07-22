@@ -1,0 +1,46 @@
+<Project>
+  <!-- 1. Core Target Framework -->
+  <PropertyGroup Label="Framework Settings">
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!-- 2. Build Settings -->
+  <PropertyGroup Label="Build Settings">
+    <UseArtifactsOutput>true</UseArtifactsOutput>
+    <DebugType>embedded</DebugType>
+    <Deterministic>true</Deterministic>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <ModulesDirectory>$(MSBuildThisFileDirectory)modules/</ModulesDirectory>
+    <TestsDirectory>$(MSBuildThisFileDirectory)tests/</TestsDirectory>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true' OR '$(TF_BUILD)' == 'True' OR '$(JENKINS_URL)' != ''">true</ContinuousIntegrationBuild>
+    <TestingPlatformCommandLineArguments>$(TestingPlatformCommandLineArguments) --ignore-exit-code 8</TestingPlatformCommandLineArguments>
+  </PropertyGroup>
+
+  <!-- 3. Code Quality & Strict Compilation Rules -->
+  <PropertyGroup Label="Code Quality">
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>Recommended</AnalysisMode>
+    <TreatWarningsAsErrors Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</TreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <!-- 4. Global Nuget Security & Integrity -->
+  <PropertyGroup Label="Package Settings">
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <!-- 5. Repository Metadata (Crucial for CI/CD & Debugging) -->
+  <PropertyGroup Label="Package Metadata">
+    <Version>1.0.0</Version>
+    <Authors>Jeffrey Mildenberg</Authors>
+    <Company>Thornes Creek</Company>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/jmildenberg/dosa.git</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

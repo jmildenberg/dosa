@@ -1,0 +1,62 @@
+<Project>
+  <!-- 1. Global Test Support Stack-->
+  <PropertyGroup Label="Test Build Settings" Condition="'$(IsTestProject)' == 'true'">
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+    <GenerateProgramFile>false</GenerateProgramFile>
+    <GenerateTestingPlatformEntryPoint>true</GenerateTestingPlatformEntryPoint>
+  </PropertyGroup>
+
+  <!-- 2. Global Test Support Dependencies -->
+  <ItemGroup Label="Test Dependencies" Condition="'$(IsTestProject)' == 'true'">
+    <!-- Package References -->
+    <PackageReference Include="xunit.v3.mtp-v2" />
+    <PackageReference Include="Microsoft.Testing.Extensions.VSTestBridge" />
+    <PackageReference Include="coverlet.mtp" PrivateAssets="All" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="NSubstitute" />
+    <!-- Package Usings -->
+    <Using Include="Xunit" />
+    <Using Include="Shouldly" />
+    <Using Include="NSubstitute" />
+  </ItemGroup>
+
+  <!-- 3. Extended Support Testcontainers -->
+  <ItemGroup Label="Testcontainers Support" Condition="'$(UseTestcontainers)' == 'true'">
+    <PackageReference Include="Testcontainers" />
+    <PackageReference Include="Testcontainers.XunitV3" />
+    <Using Include="Testcontainers"/>
+  </ItemGroup>
+
+  <!-- 4. Extended Support Playwright -->
+  <ItemGroup Label="Playwright Support" Condition="'$(UsePlaywright)' == 'true'">
+    <PackageReference Include="Microsoft.Playwright" />
+    <PackageReference Include="Microsoft.Playwright.XUnit.v3" />
+    <Using Include="Microsoft.Playwright"/>
+    <Using Include="Microsoft.Playwright.Xunit" />
+  </ItemGroup>
+
+  <!-- 5. Expose Internals to Test Packages -->
+  <ItemGroup Label="Internals Visible To Tests" Condition="'$(IsTestProject)' != 'true'">
+    <InternalsVisibleTo Include="$(AssemblyName).Tests" />
+  </ItemGroup>
+
+  <!-- 6. Publishable Project Opt-In -->
+  <PropertyGroup Label="Publish Settings" Condition="'$(IsPublishable)' == 'true'">
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+
+  <ItemGroup Label="Publish Settings" Condition="'$(IsPublishable)' == 'true'">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <None Include="readme.md" Pack="true" PackagePath="\" Condition="Exists('readme.md')" />
+  </ItemGroup>
+</Project>

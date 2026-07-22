@@ -1,0 +1,39 @@
+<Project>
+  <PropertyGroup Label="Package Management">
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
+  </PropertyGroup>
+
+  <ItemGroup Label="Code Analyzers">
+    <GlobalPackageReference Include="SonarAnalyzer.CSharp" Version="10.29.0.143774" />
+    <GlobalPackageReference Include="Roslynator.Analyzers" Version="4.15.0" />
+    <GlobalPackageReference Include="AsyncFixer" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup Label="Testing Framework">
+    <!-- Testing Framework & Runner (MTP v2 Stack) -->
+    <PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" /> 
+    <PackageVersion Include="Microsoft.Testing.Extensions.VSTestBridge" Version="2.3.2" />
+    <!-- Code Coverage via Coverlet MTP -->
+    <PackageVersion Include="coverlet.mtp" Version="10.0.1" />
+    <!-- Assertions and Mocking -->
+    <PackageVersion Include="Shouldly" Version="4.3.0" />
+    <PackageVersion Include="NSubstitute" Version="6.0.0" />
+    <!-- XUnit Extensibility -->
+    <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.2" />
+  </ItemGroup>
+
+  <ItemGroup Label="Publishing">
+    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.300" />
+  </ItemGroup>
+
+  <ItemGroup Label="Other Testing Support">
+    <!-- TestContainers Base -->
+    <PackageVersion Include="Testcontainers" Version="4.13.0" />
+    <PackageVersion Include="Testcontainers.XunitV3" Version="4.13.0" />
+    <!-- Playwright Base -->
+    <PackageVersion Include="Microsoft.Playwright" Version="1.61.0" />
+    <PackageVersion Include="Microsoft.Playwright.XUnit.v3" Version="1.61.0" />
+  </ItemGroup>
+</Project>
