@@ -8,7 +8,7 @@ built, secured, run, and governed.
 This is **guidance, not a system**. The guidance itself (in [docs/](docs/)) contains no
 application code — it describes how systems *should* be designed, built, operated, and
 governed, and records the decisions behind that guidance so the reasoning is traceable over
-time. Alongside it, the [reference architectures](reference-architectures/readme.md) provide
+time. Alongside it, the [reference architectures](reference-implementations/readme.md) provide
 concrete, runnable realizations of the guidance in specific technology stacks.
 
 ## What this guidance covers — and what it doesn't
@@ -33,7 +33,7 @@ This repository defines the standards those choices must satisfy.
 | [Operations](docs/operations.md) | **How to run** — the run-time operating and reliability model *(draft)* |
 | [Governance](docs/governance.md) | **Who decides** — the authority and accountability model |
 | [Decision Records](docs/adrs/) | **What was decided, and why** — the authoritative log of significant decisions |
-| [Reference Architectures](reference-architectures/readme.md) | **How to build it, concretely** — runnable realizations of the guidance per technology stack |
+| [Reference Architectures](reference-implementations/readme.md) | **How to build it, concretely** — runnable realizations of the guidance per technology stack |
 
 ## Getting started
 
@@ -49,7 +49,7 @@ This repository defines the standards those choices must satisfy.
 **Adopting the guidance for a new domain or team?** Start from the Architecture
 principles, then use the Engineering practices — particularly the standard domain
 module layout and the delivery, security, and contract practices — to shape the
-repository and pipeline. If a [reference architecture](reference-architectures/readme.md)
+repository and pipeline. If a [reference architecture](reference-implementations/readme.md)
 exists for your stack, clone its structure as a starting point.
 
 ## Architecture Decision Records
