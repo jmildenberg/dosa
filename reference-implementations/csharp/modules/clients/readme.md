@@ -14,8 +14,11 @@ domain that calls this one.
 A consumer needs one client, regardless of whether the calls it wraps are synchronous or messaging —
 so unlike [Contracts](../contracts/readme.md), there is no per-protocol split here. The split that
 matters is by target language — a real domain adds one subfolder per language it publishes an SDK for,
-e.g. `java/`, `csharp/`, `go/` — since a consumer in another domain's stack needs a client in its own
-language, not this domain's.
+since a consumer in another domain's stack needs a client in its own language, not this domain's:
+
+| Language | SDK |
+| --- | --- |
+| [csharp/](csharp/readme.md) | .NET client |
 
 ---
 

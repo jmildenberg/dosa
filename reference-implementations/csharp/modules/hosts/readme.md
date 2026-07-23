@@ -7,10 +7,10 @@ mandatory — divided by whether the role operates on domain state:
 
 | Host | Role | References |
 |---|---|---|
-| [api](api/readme.md) | In-process operator — domain-logic API | Domain, Application, Infrastructure |
-| [worker](worker/readme.md) | In-process operator — asynchronous processing | Domain, Application, Infrastructure |
-| [web](web/readme.md) | External consumer — request-shaping / backend-for-frontend | Contracts, Clients |
-| [mcp](mcp/readme.md) | External consumer — Model Context Protocol server | Contracts, Clients |
+| [api](api/readme.md) | In-process operator — domain-logic API | Domain, Application, Infrastructure, Contracts/api |
+| [worker](worker/readme.md) | In-process operator — asynchronous processing | Domain, Application, Infrastructure, Contracts/messaging |
+| [web](web/readme.md) | External consumer — request-shaping / backend-for-frontend | Contracts/api, Clients |
+| [mcp](mcp/readme.md) | External consumer — Model Context Protocol server | Contracts/api, Clients |
 | [shared](shared/readme.md) | Cross-host wiring shared by two or more hosts above | Varies |
 
 The operator/consumer split is the point: `web` and `mcp` reach this domain only through Contracts and

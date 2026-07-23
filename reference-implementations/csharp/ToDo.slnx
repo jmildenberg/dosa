@@ -1,2 +1,33 @@
 <Solution>
+  <Folder Name="/modules/">
+    <Project Path="modules/domain/ToDo.Domain.csproj" />
+    <Project Path="modules/application/ToDo.Application.csproj" />
+    <Project Path="modules/common/ToDo.Common.csproj" />
+    <Project Path="modules/infrastructure/ToDo.Infrastructure.csproj" />
+    <Project Path="modules/clients/csharp/ToDo.Client.csproj" />
+    <Project Path="modules/contracts/api/ToDo.Contracts.Api.csproj" />
+    <Project Path="modules/contracts/messaging/ToDo.Contracts.Messaging.csproj" />
+    <Project Path="modules/hosts/api/ToDo.Hosts.Api.csproj" />
+    <Project Path="modules/hosts/worker/ToDo.Hosts.Worker.csproj" />
+    <Project Path="modules/hosts/web/ToDo.Hosts.Web.csproj" />
+    <Project Path="modules/hosts/mcp/ToDo.Hosts.Mcp.csproj" />
+    <Project Path="modules/hosts/shared/ToDo.Hosts.Shared.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/domain/ToDo.Domain.Tests.csproj" />
+    <Project Path="tests/application/ToDo.Application.Tests.csproj" />
+    <Project Path="tests/common/ToDo.Common.Tests.csproj" />
+    <Project Path="tests/infrastructure/ToDo.Infrastructure.Tests.csproj" />
+    <Project Path="tests/architecture/ToDo.Architecture.Tests.csproj" />
+    <Project Path="tests/system/ToDo.System.Tests.csproj" />
+    <Project Path="tests/support/ToDo.TestSupport.csproj" />
+    <Project Path="tests/clients/csharp/ToDo.Client.Tests.csproj" />
+    <Project Path="tests/contracts/api/ToDo.Contracts.Api.Tests.csproj" />
+    <Project Path="tests/contracts/messaging/ToDo.Contracts.Messaging.Tests.csproj" />
+    <Project Path="tests/hosts/api/ToDo.Hosts.Api.Tests.csproj" />
+    <Project Path="tests/hosts/worker/ToDo.Hosts.Worker.Tests.csproj" />
+    <Project Path="tests/hosts/web/ToDo.Hosts.Web.Tests.csproj" />
+    <Project Path="tests/hosts/mcp/ToDo.Hosts.Mcp.Tests.csproj" />
+    <Project Path="tests/hosts/shared/ToDo.Hosts.Shared.Tests.csproj" />
+  </Folder>
 </Solution>

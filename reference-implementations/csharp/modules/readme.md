@@ -7,12 +7,12 @@ on something built on top of it, only on what it's built on.
 
 | Module | Responsibility | Depends on |
 |---|---|---|
-| [Domain](domain/readme.md) | Core business entities and domain rules | Nothing |
-| [Application](application/readme.md) | Use cases and orchestration | Domain |
+| [Domain](domain/readme.md) | Core business entities and domain rules | Common |
+| [Application](application/readme.md) | Use cases and orchestration | Domain, Common |
 | [Common](common/readme.md) | Shared kernel — cross-cutting types and utilities, no business logic | Nothing |
 | [Contracts](contracts/readme.md) | Published request, response, and event schema types this domain exposes | Nothing |
 | [Clients](clients/readme.md) | Consumer-facing SDKs for calling this domain | Contracts |
-| [Infrastructure](infrastructure/readme.md) | Adapters for persistence, messaging, and external services | Application, Domain |
+| [Infrastructure](infrastructure/readme.md) | Adapters for persistence, messaging, and external services | Application, Domain, Contracts/messaging |
 | [Hosts](hosts/readme.md) | Deployable entry points | Varies by host role — see [Hosts](hosts/readme.md) |
 | Frontend *(optional, not scaffolded here)* | Presentation role, reaches the domain only through `hosts/web` | Nothing in this domain directly |
 

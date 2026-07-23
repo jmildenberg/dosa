@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../modules/hosts/api/ToDo.Hosts.Api.csproj" />
+    <ProjectReference Include="../../modules/hosts/worker/ToDo.Hosts.Worker.csproj" />
+    <ProjectReference Include="../../modules/contracts/api/ToDo.Contracts.Api.csproj" />
+    <ProjectReference Include="../../modules/contracts/messaging/ToDo.Contracts.Messaging.csproj" />
+    <ProjectReference Include="../support/ToDo.TestSupport.csproj" />
+  </ItemGroup>
+
+</Project>

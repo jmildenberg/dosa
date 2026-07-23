@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../modules/domain/ToDo.Domain.csproj" />
+    <ProjectReference Include="../../modules/application/ToDo.Application.csproj" />
+    <ProjectReference Include="../../modules/common/ToDo.Common.csproj" />
+    <ProjectReference Include="../../modules/contracts/api/ToDo.Contracts.Api.csproj" />
+    <ProjectReference Include="../../modules/contracts/messaging/ToDo.Contracts.Messaging.csproj" />
+    <ProjectReference Include="../../modules/clients/csharp/ToDo.Client.csproj" />
+    <ProjectReference Include="../../modules/infrastructure/ToDo.Infrastructure.csproj" />
+    <ProjectReference Include="../../modules/hosts/api/ToDo.Hosts.Api.csproj" />
+    <ProjectReference Include="../../modules/hosts/worker/ToDo.Hosts.Worker.csproj" />
+    <ProjectReference Include="../../modules/hosts/web/ToDo.Hosts.Web.csproj" />
+    <ProjectReference Include="../../modules/hosts/mcp/ToDo.Hosts.Mcp.csproj" />
+    <ProjectReference Include="../../modules/hosts/shared/ToDo.Hosts.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

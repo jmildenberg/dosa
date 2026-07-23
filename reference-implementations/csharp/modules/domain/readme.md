@@ -5,10 +5,12 @@
 The innermost layer — entities and domain rules that would still be true if every framework, database,
 and transport in this repository were swapped out.
 
-**Depends on:** nothing. No framework, persistence, or infrastructure reference belongs here — that is
-the whole point of the layer. **Depended on by:** Application and Infrastructure.
+**Depends on:** [Common](../common/readme.md) only — no framework, persistence, or infrastructure
+reference belongs here, that is the whole point of the layer. **Depended on by:** Application and
+Infrastructure.
 
-Because it has no dependencies, this is the module that should be the cheapest to unit-test.
+Because its only dependency is the shared kernel, this is the module that should be the cheapest to
+unit-test.
 
 ---
 

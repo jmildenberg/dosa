@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../../contracts/api/ToDo.Contracts.Api.csproj" />
+    <ProjectReference Include="../../clients/csharp/ToDo.Client.csproj" />
+  </ItemGroup>
+
+</Project>

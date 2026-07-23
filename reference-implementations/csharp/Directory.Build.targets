@@ -6,7 +6,6 @@
     <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
     <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
     <GenerateProgramFile>false</GenerateProgramFile>
-    <GenerateTestingPlatformEntryPoint>true</GenerateTestingPlatformEntryPoint>
   </PropertyGroup>
 
   <!-- 2. Global Test Support Dependencies -->
