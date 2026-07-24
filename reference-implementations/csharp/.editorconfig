@@ -391,3 +391,8 @@ dotnet_naming_style.s_camelcase.capitalization = camel_case
 # Test projects: xUnit's Method_Should_Do naming convention uses underscores by design
 [tests/**.cs]
 dotnet_diagnostic.CA1707.severity = none
+
+# AppRuntimeException: Status is a required field with no meaningful default, so the
+# standard parameterless/message-only/serialization exception constructors don't apply.
+[modules/common/Exceptions/AppRuntimeException.cs]
+dotnet_diagnostic.RCS1194.severity = none

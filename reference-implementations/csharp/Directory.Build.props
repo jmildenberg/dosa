@@ -16,7 +16,7 @@
     <ModulesDirectory>$(MSBuildThisFileDirectory)modules/</ModulesDirectory>
     <TestsDirectory>$(MSBuildThisFileDirectory)tests/</TestsDirectory>
     <ContinuousIntegrationBuild Condition="'$(CI)' == 'true' OR '$(TF_BUILD)' == 'True' OR '$(JENKINS_URL)' != ''">true</ContinuousIntegrationBuild>
-    <TestingPlatformCommandLineArguments>$(TestingPlatformCommandLineArguments) --ignore-exit-code 8</TestingPlatformCommandLineArguments>
+    <TestingPlatformCommandLineArguments>$(TestingPlatformCommandLineArguments) --ignore-exit-code 8 --coverlet-file-prefix $(MSBuildProjectName).</TestingPlatformCommandLineArguments>
   </PropertyGroup>
 
   <!-- 3. Code Quality & Strict Compilation Rules -->
